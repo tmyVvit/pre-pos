@@ -7,10 +7,7 @@ function countSameElements(collection) {
   for(var i = 0; i < collection.length; i++){
     if(collection[i].length > 1){
       ch = collection[i][0];
-      if(collection[i].length > 4){
-        count = collection[i][2]*10 + collection[i][3]*1;
-      }
-      else count = collection[i][2]; 
+      count = collection[i].replace(/[^0-9]/ig, "");
     } else {
       ch = collection[i];
       count = 1;
